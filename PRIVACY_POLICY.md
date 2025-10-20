@@ -46,7 +46,7 @@ We may update this privacy policy from time to time. Any changes will be reflect
 
 ## Contact
 
-For questions or concerns about this privacy policy, please contact: [your-email@example.com]
+For questions or concerns about this privacy policy, please contact: [Krelle757@gmail.com]
 
 ---
 
