@@ -5,9 +5,7 @@
   "description": "Import LinkedIn skills to your profile with one click",
   "permissions": [
     "activeTab",
-    "scripting",
-    "storage",
-    "clipboardWrite"
+    "scripting"
   ],
   "host_permissions": [
     "https://www.linkedin.com/*"
