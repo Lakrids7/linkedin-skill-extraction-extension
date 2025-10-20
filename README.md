@@ -1,0 +1,1 @@
+# linkedin-skill-extraction-extension
