@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Skills Importer</title>
+  <style>
+    body {
+      width: 350px;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-size: 18px;
+      margin: 10px 0;
+      color: #0a66c2;
+    }
+
+    .status {
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .status.info {
+      background-color: #e7f3ff;
+      color: #0a66c2;
+      border: 1px solid #0a66c2;
+    }
+
+    .status.success {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #28a745;
+    }
+
+    .status.error {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #dc3545;
+    }
+
+    .status.warning {
+      background-color: #fff3cd;
+      color: #856404;
+      border: 1px solid #ffc107;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #0a66c2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      margin-bottom: 10px;
+    }
+
+    button:hover:not(:disabled) {
+      background-color: #004182;
+    }
+
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    .skills-preview {
+      max-height: 200px;
+      overflow-y: auto;
+      background-color: #f8f9fa;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      padding: 10px;
+      margin: 15px 0;
+      font-size: 13px;
+      display: none;
+    }
+
+    .skills-preview ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .skills-preview li {
+      margin: 5px 0;
+    }
+
+    .instructions {
+      font-size: 12px;
+      color: #666;
+      text-align: center;
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #dee2e6;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🔗 LinkedIn Skills Importer</h1>
+  </div>
+
+  <div id="status" class="status info">
+    Navigate to a LinkedIn profile's skills page
+  </div>
+
+  <button id="importBtn">Import Skills</button>
+  <button id="downloadBtn" style="display: none;">Download as JSON</button>
+
+  <div id="skillsPreview" class="skills-preview"></div>
+
+  <div class="instructions">
+    <strong>How to use:</strong><br>
+    1. Go to any LinkedIn profile<br>
+    2. Click on "Skills" section<br>
+    3. Click "Import Skills" button
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

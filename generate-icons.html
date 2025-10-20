@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Extension Icons</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        canvas { border: 1px solid #ccc; margin: 10px; }
+        button { padding: 10px 20px; font-size: 16px; margin: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Extension Icon Generator</h1>
+    <p>Click the buttons below to download the icons:</p>
+    <canvas id="canvas16" width="16" height="16"></canvas>
+    <canvas id="canvas48" width="48" height="48"></canvas>
+    <canvas id="canvas128" width="128" height="128"></canvas>
+    <br>
+    <button onclick="downloadAll()">Download All Icons</button>
+
+    <script>
+        function drawIcon(canvas) {
+            const ctx = canvas.getContext('2d');
+            const size = canvas.width;
+
+            // LinkedIn blue background with rounded corners
+            ctx.fillStyle = '#0A66C2';
+            ctx.fillRect(0, 0, size, size);
+
+            // White border
+            ctx.strokeStyle = 'white';
+            ctx.lineWidth = Math.max(1, size / 32);
+            ctx.strokeRect(size/8, size/8, size*3/4, size*3/4);
+
+            // Green plus sign (top right)
+            const plusSize = size / 4;
+            const plusX = size - plusSize - size/8;
+            const plusY = size/8;
+            const plusWidth = Math.max(2, size / 16);
+
+            ctx.fillStyle = '#57D9A3';
+            // Horizontal
+            ctx.fillRect(plusX, plusY + plusSize/2 - plusWidth/2, plusSize, plusWidth);
+            // Vertical
+            ctx.fillRect(plusX + plusSize/2 - plusWidth/2, plusY, plusWidth, plusSize);
+        }
+
+        function downloadIcon(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const url = canvas.toDataURL('image/png');
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+        }
+
+        function downloadAll() {
+            drawIcon(document.getElementById('canvas16'));
+            drawIcon(document.getElementById('canvas48'));
+            drawIcon(document.getElementById('canvas128'));
+
+            setTimeout(() => downloadIcon('canvas16', 'icon16.png'), 100);
+            setTimeout(() => downloadIcon('canvas48', 'icon48.png'), 300);
+            setTimeout(() => downloadIcon('canvas128', 'icon128.png'), 500);
+
+            alert('Icons will download shortly. Move them to the icons/ folder.');
+        }
+
+        // Draw icons on load
+        window.onload = () => {
+            drawIcon(document.getElementById('canvas16'));
+            drawIcon(document.getElementById('canvas48'));
+            drawIcon(document.getElementById('canvas128'));
+        };
+    </script>
+</body>
+</html>
+

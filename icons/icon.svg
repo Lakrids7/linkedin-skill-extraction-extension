@@ -1,0 +1,6 @@
+<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg">
+  <rect width="128" height="128" rx="20" fill="#0A66C2"/>
+  <text x="64" y="80" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="white" text-anchor="middle">Li</text>
+  <circle cx="100" cy="30" r="15" fill="#57D9A3"/>
+  <path d="M 95 30 L 105 30 M 100 25 L 100 35" stroke="white" stroke-width="3" stroke-linecap="round"/>
+</svg>
