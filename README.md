@@ -1,4 +1,4 @@
-# LinkedIn Skills Importer
+s# LinkedIn Skills Importer
 
 A simple browser extension that extracts skills from LinkedIn profiles with one click.
 
@@ -16,10 +16,10 @@ A simple browser extension that extracts skills from LinkedIn profiles with one 
 ## Installation
 
 ### Chrome Web Store
-*Coming soon - currently in review*
+(https://chromewebstore.google.com/detail/linkedin-skills-importer/lkhjbkpanpolhijihjjkbjjiamjgddlf?authuser=0&hl=da)
 
 ### Firefox Add-ons
-*Coming soon - currently in review*
+(https://addons.mozilla.org/en-US/firefox/addon/linkedin-skills-importer/)
 
 ### Manual Installation
 
